@@ -22,18 +22,17 @@
 
 ## Пример использования
 
-Подключите `IntegrityCheckRuntime` к своему проекту и вызовите метод `Initialize` в самом начале выполнения программы:
+Чтобы интегрировать **Advanced Integrity Check** в ваше приложение, выполните следующие шаги:
 
-```csharp
-using System;
+### Шаг 1: Подключите `IntegrityCheckRuntime`
 
-class Program
-{
-    static void Main(string[] args)
-    {
-        IntegrityCheckRuntime.Initialize();
+1. Скачайте файл `IntegrityCheckRuntime.cs` из этого репозитория.
+2. Добавьте его в свой проект .NET (например, скопируйте файл в папку `Helpers` или `Security` вашего проекта).
 
-        // Основная логика программы
-        Console.WriteLine("Добро пожаловать в защищённое приложение!");
-    }
-}
+### Шаг 2: Установите библиотеку `Microsoft.CodeAnalysis`
+
+Убедитесь, что в проекте установлена библиотека `Microsoft.CodeAnalysis`. Вы можете добавить её через NuGet:
+
+```bash
+dotnet add package Microsoft.CodeAnalysis
+
